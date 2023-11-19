@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf build && tsc --build tsconfig.json",
+    "start": "node --experimental-specifier-resolution=node build/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
