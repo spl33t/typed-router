@@ -1,4 +1,4 @@
-import { initServer, initClient } from "@typed-router/core"
+import { initServer } from "@typed-router/core"
 
 export const { route, createRouter, declareSchema } = initServer((req, res) => {
   console.log("debug")

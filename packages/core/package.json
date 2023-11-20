@@ -8,8 +8,8 @@
   "types": "build/index.d.ts",
   "module": "build/index.js",
   "scripts": {
-    "dev": "rimraf build && tsc --build tsconfig.json --watch",
-    "build": "rimraf build && tsc --build tsconfig.json && npm install --workspaces",
+    "dev": "rimraf build && tsc --build --watch",
+    "build": "rimraf build && tsc --build",
     "start": "ts-node-esm --experimental-specifier-resolution=node build/index.js"
   },
   "devDependencies": {

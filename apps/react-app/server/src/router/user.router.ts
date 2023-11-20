@@ -19,12 +19,10 @@ const all = route()
   .method("GET")
   .query(declareSchema<{ name: string, age: string }>())
   .handler(req => {
-    console.log(req.query)
     const user = users.find(s => s.name === req.query.name || s.age === Number(req.query.age))
     if (user) return user
     else return users
   })
-
 
 const greetings = route()
   .path("greetings")
@@ -33,8 +31,6 @@ const greetings = route()
   .handler(req => {
     return req.greetings(req.query.name)
   })
-
-const getUserTest = all
 
 const create = route()
   .path("user")
@@ -54,8 +50,6 @@ const byId = route()
   .handler((req) => {
     return users.find(s => s.id === Number(req.params.id))
   })
-
-const createUserTest = create.path
 
 export const userRouter = {
   create,
